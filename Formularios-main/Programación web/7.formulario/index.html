@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form id="DataForm">
+        <fieldset><legend>Datos personales</legend>
+        <label for="name">Nombre:</label>
+        <input type="text"
+        id="name"
+        name="name"
+        placeholder="Introduce tu nombre"
+        minlength="3"
+        maxlength="50"
+        title="introduce al menos 3 caracteres, máximo 50"
+        tabindex="0"
+        autofocus="true"
+        autocomplete="off"
+        required
+        ><br><br>
+        <select id="typeDocument" name="TypeDocument">
+            <option value="nada" selected="Selected">Seleccione un tipo de documento</option>
+            <option value="cc">Cédula de identidad</option>
+            <option value="Ti">Tarjeta de identidad</option>
+            <option value="ce">Cédula e extranjería</option>
+        </select>
+        <label for="Document" >No documento:</label>
+        <input type="number" id="Document" name="Document" placeholder="Introduce tu documento de identidad" min="2" max="99" tabindex="1">
+        <label for="estadoCivil">Estado Civil:</label>
+        <input type="radio" name="eCivil" id="eCivil" value="soltero">soltero
+        <input type="radio" name="eCivil" id="eCivil" value="Casado">casado(a)
+        <input type="radio" name="eCivil" id="eCivil" value="Divorciado">Divorciado(a)
+        <input type="radio" name="eCivil" id="eCivil" value="viudo">viudo(a)
+    </fieldset>
+    
+    <fieldset><legend>Información de estudio y otros:</legend>
+        <label for="colores">Color favorito:</label>
+        <input type="color" id="colores">
+        <label for="DateInsc">Fecha de inscripción:</label>
+        <input type="date" id="DateInsc">
+        <label for="DocumentFile">Cargue los documentos de requisitos</label>
+        <input type="file" name="file" id="DocumentFile">
+    </fieldset>
+    <hr>
+    <label for="Lenguajes">Lenguajes de programación</label>
+    <select id="lenguajes" name="lenguajes"> 
+    <optgroup label="Lenguajes tipados">
+        <option value="java">Java</option>
+        <option value="c5harp">C#</option>
+        <option value="c">C++</option>
+    </optgroup>
+    <optgroup label="Lenguajes no tipados">
+        <option value="python">Python</option>
+        <option value="js">JavaScript</option>
+    </optgroup>
+    </select><br>
+    <label for="Acepta">¿Acepta términos y condicones?</label>
+    <input type="checkbox" id="términos">
+    <hr>
+    <input type="submit" value="envío de datos"><!--PHP-->
+    <button id="validar">Validar</button><!--JavaScript-->
+    
+
+    </form>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
